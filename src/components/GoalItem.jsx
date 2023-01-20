@@ -16,17 +16,25 @@ function GoalItem({ goal }) {
       <p>{goal.stock}</p>
       <p>{goal.description}</p>
       <p>{goal.prix}</p>
-    
-      <button className='btnd' onClick={() => dispatch(deleteGoal(goal._id))} >
-        supprimer
-      </button>
-      <h4>
-					<Link to={`Updateform/${goal._id}`} className='btnd'  onClick={() =>  {localStorage.setItem('produitid', goal._id)}}>
-        
-					update
-					</Link>
-				</h4>
+      {
+
+      }
+      <div>
+      {localStorage.getItem('role') !='user'
+									? <div> <button className='btn btn-primary m-2' onClick={() => dispatch(deleteGoal(goal._id))} >
+                  supprimer
+                </button>
+               
+                    <Link to={`Updateform/${goal._id}`} className='btn btn-primary'  onClick={() =>  {localStorage.setItem('produitid', goal._id)}}>
+                  
+                    update
+                    </Link>
+                    </div>
+									: ''}
      
+      </div>
+     
+				
          
      
     </div>

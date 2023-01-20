@@ -10,6 +10,7 @@ const register = async (userData) => {
     localStorage.setItem('user', JSON.stringify(response.data))
     localStorage.setItem('Bearer', response.data.token);
     localStorage.setItem('id', response.data.userId);
+    localStorage.setItem('role', response.data.userrole);
     
   }
 
@@ -24,6 +25,7 @@ const login = async (userData) => {
     localStorage.setItem('user', JSON.stringify(response.data))
     localStorage.setItem('Bearer', response.data.token);
     localStorage.setItem('id', response.data.userId);
+    localStorage.setItem('role', response.data.userrole);
   }
 
   return response.data
@@ -34,6 +36,7 @@ const logout = () => {
   localStorage.removeItem('user')
   localStorage.removeItem('Bearer')
   localStorage.removeItem('id')
+  localStorage.removeItem('role', );
 }
 
 const authService = {

@@ -38,17 +38,19 @@ function Dashboard() {
 
   return (
     <>
-      <section className='heading'>
+      {/*<section className='heading'>
         <h1>Welcome {user && user.name}</h1>
-        <p>Goals Dashboard</p>
-      </section>
+  </section>*/}
      
-
-      <h4>
-					<Link to={'GoalForm'} className='btn btn-primary  btn-block btn-lg'>
-						Ajouter un produit
-					</Link>
-				</h4>
+     {localStorage.getItem('role') !='user'
+									? <div> <h4>
+                  <Link to={'GoalForm'} className='btn btn-primary  btn-block btn-lg'>
+                    Ajouter un produit
+                  </Link>
+                </h4>
+                    </div>
+									: ''}
+      
 
       <section className='content'>
         {goals.length > 0 ? (

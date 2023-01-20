@@ -17,7 +17,7 @@ function Header() {
   return (
     <header className='header'>
       <div className='logo'>
-        <Link to='/'>E-COMMERCE</Link>
+        <Link to='/'  className='logo'>E-COMMERCE</Link>
       </div>
       <ul>
         {user ? (
@@ -29,12 +29,12 @@ function Header() {
         ) : (
           <>
             <li>
-              <Link to='/login'>
+              <Link to='/login' className='btn  btn-info'>
                 <FaSignInAlt /> Login
               </Link>
             </li>
             <li>
-              <Link to='/register'>
+              <Link to='/register' className='btn  btn-info'>
                 <FaUser /> Register
               </Link>
             </li>

@@ -40,14 +40,23 @@ function GoalForm({goal}) {
   }
 
   return (
-    
-    <section className='form'>
-       <Link
-                    to={"/"}
-                    className="btnajouter"
-                  >
-                    Retour
-                  </Link>
+   <section className='form'>
+       <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-md-6">
+        <div className="card">
+          <div className="card-header">
+            <h4>
+              Ajout produit
+              <Link
+                to="/"
+                className="btn btn-danger btn-sm float-end"
+              >
+                Retour
+              </Link>
+            </h4>
+          </div>
+      <div className="card-body">
       <form onSubmit={onSubmit}>
         <div className='form-group'>
           <label htmlFor='text'>code</label>
@@ -137,7 +146,7 @@ function GoalForm({goal}) {
         <h4>
         <div>
         
-  <button className='btn btn-block' type='submit' >Ajouter </button>
+  <button className=' btn btn-primary  btn-block btn-lg ' type='submit' >Ajouter </button>
     </div>
 		
 						
@@ -146,6 +155,11 @@ function GoalForm({goal}) {
          
         </div>
       </form>
+      </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
