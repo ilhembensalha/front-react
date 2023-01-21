@@ -59,9 +59,8 @@ function Login() {
     <>
       <section className='heading'>
         <h1>
-          <FaSignInAlt /> Login
+          <FaSignInAlt /> Se connecter
         </h1>
-        <p>Login </p>
       </section>
 
       <section className='form'>
@@ -73,7 +72,7 @@ function Login() {
               id='email'
               name='email'
               value={email}
-              placeholder='Enter your email'
+              placeholder='Adresse E-mail'
               onChange={onChange}
             />
           </div>
@@ -84,14 +83,14 @@ function Login() {
               id='password'
               name='password'
               value={password}
-              placeholder='Enter password'
+              placeholder='Mot De Passe'
               onChange={onChange}
             />
           </div>
 
           <div className='form-group'>
             <button type='submit' className='btn btn-primary  btn-block btn-lg '>
-              Submit
+            Se connecter
             </button>
           </div>
         </form>

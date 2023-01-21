@@ -23,19 +23,19 @@ function Header() {
         {user ? (
           <li>
             <button className='btn  btn-info' onClick={onLogout}>
-              <FaSignOutAlt /> Logout
+              <FaSignOutAlt /> déconnecter
             </button>
           </li>
         ) : (
           <>
             <li>
               <Link to='/login' className='btn  btn-info'>
-                <FaSignInAlt /> Login
+                <FaSignInAlt /> Se connecter
               </Link>
             </li>
             <li>
               <Link to='/register' className='btn  btn-info'>
-                <FaUser /> Register
+                <FaUser /> S’inscrire
               </Link>
             </li>
           </>

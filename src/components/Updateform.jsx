@@ -145,9 +145,8 @@ function GoalForm  (){
   const onSubmit = (e) => {
     e.preventDefault()
     //history("/");
-    dispatch(updateproduit(localStorage.getItem('produitid'),{code,image,fonctionnalités,avis,notes,stock,description,prix}))
+    dispatch(updateproduit(localStorage.getItem('produitid'),{code,fonctionnalités,avis,notes,stock,description,prix}))
     setcode('')
-    setimage('')
     setfonctionnalités('')
     setnotes('')
     setavis('')
@@ -208,7 +207,7 @@ function GoalForm  (){
    </div>
    </div>
         <div className="form-group mb-3 row"> 
-          <div className="col-sm-2 fw-bold">description</div>
+          <div className="col-sm-2 fw-bold">descri</div>
           <div className="col-sm-10">
               <div class="mb-2">
           <input
@@ -266,7 +265,7 @@ function GoalForm  (){
           </div>
         </div>
         <div className="form-group mb-3 row"> 
-          <div className="col-sm-2 fw-bold">fonctionnalités</div>
+          <div className="col-sm-2 fw-bold">fonction</div>
           <div className="col-sm-10">
               <div class="mb-2">
           <input
@@ -279,7 +278,7 @@ function GoalForm  (){
             </div>
             </div>
         </div>
-        <div className="form-group mb-3 row"> 
+       { /*<div className="form-group mb-3 row"> 
           <div className="col-sm-2 fw-bold">image</div>
           <div className="col-sm-10">
               <div class="mb-2">
@@ -293,12 +292,12 @@ function GoalForm  (){
         </div>
         </div>
         </div>
-        
+        */}
         
         <div className="form-group row">
           
   
-            <button className='btn btn-primary  btn-block btn-lg ' type='submit' >Update </button>
+            <button className='btn btn-primary  btn-block btn-lg ' type='submit' > Mettre à jour </button>
             </div>
           
        

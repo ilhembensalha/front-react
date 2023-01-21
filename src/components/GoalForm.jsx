@@ -28,9 +28,8 @@ function GoalForm({goal}) {
   const onSubmit = (e) => {
     e.preventDefault()
     history("/");
-    dispatch(createGoal({ code,image,fonctionnalités,avis,notes,stock,description,prix }))
+    dispatch(createGoal({ code,fonctionnalités,avis,notes,stock,description,prix }))
     setcode('')
-    setimage('')
     setfonctionnalités('')
     setnotes('')
     setavis('')
@@ -47,7 +46,7 @@ function GoalForm({goal}) {
         <div className="card">
           <div className="card-header">
             <h4>
-              Ajout produit
+              Ajouter produit
               <Link
                 to="/"
                 className="btn btn-danger btn-sm float-end"
@@ -58,8 +57,11 @@ function GoalForm({goal}) {
           </div>
       <div className="card-body">
       <form onSubmit={onSubmit}>
-        <div className='form-group'>
-          <label htmlFor='text'>code</label>
+        
+        <div className="form-group mb-3 row"> 
+          <div className="col-sm-2 fw-bold">code</div>
+          <div className="col-sm-10">
+              <div class="mb-2">
           <input
             type='text'
             name='code'
@@ -67,10 +69,13 @@ function GoalForm({goal}) {
             value={code}
             onChange={(e) => setcode(e.target.value)}
           />
-        </div>
-
-        <div className='form-group'>
-          <label htmlFor='text'>prix</label>
+       </div>
+            </div>
+            </div>
+            <div className="form-group mb-3 row"> 
+          <div className="col-sm-2 fw-bold">prix</div>
+          <div className="col-sm-10">
+              <div class="mb-2">
           <input
             type='text'
             name='prix'
@@ -79,8 +84,13 @@ function GoalForm({goal}) {
             onChange={(e) => setprix(e.target.value)}
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='text'>description</label>
+            </div>
+            </div>
+
+            <div className="form-group mb-3 row"> 
+          <div className="col-sm-2 fw-bold">descri</div>
+          <div className="col-sm-10">
+              <div class="mb-2">
           <input
             type='text'
             name='description'
@@ -88,9 +98,14 @@ function GoalForm({goal}) {
             value={description}
             onChange={(e) => setdescription(e.target.value)}
           />
-        </div>
-        <div className='form-group'>
-          <label htmlFor='text'>stock</label>
+       </div>
+            </div>
+            </div>
+
+            <div className="form-group mb-3 row"> 
+          <div className="col-sm-2 fw-bold">stock</div>
+          <div className="col-sm-10">
+              <div class="mb-2">
           <input
             type='text'
             name='stock'
@@ -98,9 +113,13 @@ function GoalForm({goal}) {
             value={stock}
             onChange={(e) => setstock(e.target.value)}
           />
-        </div>
-        <div className='form-group'>
-          <label htmlFor='text'>notes</label>
+       </div>
+            </div>
+            </div>
+            <div className="form-group mb-3 row"> 
+          <div className="col-sm-2 fw-bold">notes</div>
+          <div className="col-sm-10">
+              <div class="mb-2">
           <input
             type='text'
             name='notes'
@@ -108,9 +127,13 @@ function GoalForm({goal}) {
             value={notes}
             onChange={(e) => setnotes(e.target.value)}
           />
-        </div>
-        <div className='form-group'>
-          <label htmlFor='text'>avis</label>
+       </div>
+            </div>
+            </div>
+            <div className="form-group mb-3 row"> 
+          <div className="col-sm-2 fw-bold">avis</div>
+          <div className="col-sm-10">
+              <div class="mb-2">
           <input
             type='text'
             name='avis'
@@ -118,9 +141,13 @@ function GoalForm({goal}) {
             value={avis}
             onChange={(e) => setavis(e.target.value)}
           />
-        </div>
-        <div className='form-group'>
-          <label htmlFor='text'>fonctionnalités</label>
+       </div>
+            </div>
+            </div>
+            <div className="form-group mb-3 row"> 
+          <div className="col-sm-2 fw-bold">fonction</div>
+          <div className="col-sm-10">
+              <div class="mb-2">
           <input
             type='text'
             name='fonctionnalités'
@@ -129,7 +156,9 @@ function GoalForm({goal}) {
             onChange={(e) => setfonctionnalités(e.target.value)}
           />
         </div>
-        <div className='form-group'>
+            </div>
+            </div>
+        {/*<div className='form-group'>
           <label htmlFor='text'>image</label>
           <input
             type='text'
@@ -138,9 +167,15 @@ function GoalForm({goal}) {
             value={image}
             onChange={(e) => setimage(e.target.value)}
           />
-        </div>
+  </div>*/}
         
-        
+      {/*  <br></br>
+                <input type="file"
+                  name="image"
+                  placeholder="Enter Product image"
+                  onChange={e => setimage(e.target.files[0])} />
+                  <br></br>
+<br></br>*/}
         
         <div className='form-group'>
         <h4>
