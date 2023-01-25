@@ -7,7 +7,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import GoalForm from './components/GoalForm'
 import Updateform from './components/Updateform'
-
+import Details from './components/Details'
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Dashboard />} />
             <Route path='/GoalForm' element={<GoalForm />} />
+            <Route path='/Details/:id' element={<Details />} />
             <Route path='/Updateform/:id' element={<Updateform />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />

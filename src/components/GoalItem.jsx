@@ -10,13 +10,10 @@ function GoalItem({ goal }) {
     <div className='goal'>
       <div class="container">
   <div class="row">
-  <div class="col"><img src={'http://localhost:5000/postImages/'+goal.image}  style ={{width:'200px',height:'280px'}} /></div>
+  <div class="col"><img src={'http://localhost:5000/postImages/'+goal.image}  style ={{width:'200px',height:'180px'}} /></div>
   <div class="col">  
    <h2>{goal.code}</h2>
       <p>{goal.fonctionnalités}</p>
-      <p>{goal.avis}</p>
-      <p>{goal.notes}</p>
-      <p>{goal.stock}</p>
       <p>{goal.description}</p>
       <p>{goal.prix}</p>
       </div>
@@ -28,12 +25,19 @@ function GoalItem({ goal }) {
                   Supprimer
                 </button>
                
-                    <Link to={`Updateform/${goal._id}`} className='btn btn-primary ms-5'  onClick={() =>  {localStorage.setItem('produitid', goal._id)}}>
+                    <Link to={`Updateform/${goal._id}`} className='btn btn-primary ms-2'  onClick={() =>  {localStorage.setItem('produitid', goal._id)}}>
                   
                     Mettre à jour
                     </Link>
+                    <Link to={`Details/${goal._id}`} className='btn btn-primary ms-2'  onClick={() =>  {localStorage.setItem('produitid', goal._id)}}>
+                  
+                    Details
+                  </Link>
                     </div>
-									: ''}
+									:  <Link to={`Details/${goal._id}`} className='btn btn-primary  btn-block btn-lg '  onClick={() =>  {localStorage.setItem('produitid', goal._id)}}>
+                  
+                  Details
+                </Link>}
      
       </div>
      </div>
